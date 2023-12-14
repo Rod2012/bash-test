@@ -1,0 +1,26 @@
+# This service unit is for check files from a server, download them and upload them via curl (POST) to another
+# project is /var/www/html/twitter-search
+# By Rodney Salcedo
+# Licensed under GPL V2
+# guide: https://opensource.com/article/20/7/systemd-timers
+# Copy into /etc/systemd/system
+# systemctl start myCronTimeCheckerHK.timer
+# systemctl enable --now myCronTimeCheckerHK.timer
+# systemctl list-timers --all
+
+[Unit]
+Description=Download files from a server and upload them via curl (POST) to another server
+Wants=myCronTimeCheckerHK.timer
+
+[Service]
+Type=oneshot
+
+
+User=root
+WorkingDirectory=/opt/automata
+ExecStart=bash /opt/automata/automata02.sh
+
+
+
+[Install]
+WantedBy=multi-user.target

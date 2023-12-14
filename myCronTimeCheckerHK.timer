@@ -1,0 +1,19 @@
+# This service unit is for check the time to send me email with the twitter information
+# project is /var/www/html/twitter-search
+# By Rodney Salcedo
+# Licensed under GPL V2
+# guide: https://opensource.com/article/20/7/systemd-timers
+# Copy into /etc/systemd/system
+
+[Unit]
+Description=Timer for myCronTimeCheckerHK.service
+Requires=myCronTimeCheckerHK.service
+
+[Timer]
+Unit=myCronTimeCheckerHK.service
+OnCalendar=*-*-* 08:01:00
+# OnCalendar=hourly
+
+
+[Install]
+WantedBy=timers.target
