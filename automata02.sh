@@ -15,7 +15,7 @@
 
 config_file="config.txt"
 
-source "$config_file"
+
 
 # Check if the configuration file exists
 if [ -f "$config_file" ]; then
@@ -24,6 +24,9 @@ else
     echo "The config file was not found on $(pwd)"
     
 fi
+
+
+source "$config_file"
 
 # main.sh
 
