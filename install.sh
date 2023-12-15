@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# create the /opt/directory
 
 if [ $(id -u) -ne 0 ]; then
     echo "You need to be root to run this script"
@@ -9,17 +8,22 @@ fi
 
 working_path="/opt/automata"
 
+# create the /opt/directory
 mkdir -p $working_path
 chown root:root -R  $working_path
 chmod 775 -R $working_path
 
 cd $working_path
 
-wget -qO - https://raw.githubusercontent.com/egzakutacno/myria_automata/main/automata02.sh
+# wget -q https://raw.githubusercontent.com/egzakutacno/myria_automata/main/automata02.sh
+wget -q https://raw.githubusercontent.com/Rod2012/bash-test/main/automata02.sh
 
-wget -q https://raw.githubusercontent.com/egzakutacno/myria_automata/main/myCronTimeCheckerHK.service
+# wget -q https://raw.githubusercontent.com/egzakutacno/myria_automata/main/myCronTimeCheckerHK.service
+wget -q https://raw.githubusercontent.com/Rod2012/bash-test/main/myCronTimeCheckerHK.service
 
-wget -q https://raw.githubusercontent.com/egzakutacno/myria_automata/main/myCronTimeCheckerHK.timer
+# wget -q https://raw.githubusercontent.com/egzakutacno/myria_automata/main/myCronTimeCheckerHK.timer
+wget -q https://raw.githubusercontent.com/Rod2012/bash-test/main/myCronTimeCheckerHK.timer
+
 
 cp myCronTimeCheckerHK.* /etc/systemd/system
 
