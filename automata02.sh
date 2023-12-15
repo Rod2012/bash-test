@@ -20,13 +20,14 @@ config_file="config.txt"
 # Check if the configuration file exists
 if [ -f "$config_file" ]; then
     # Configuration file exists, source it
+    source "$config_file"
 else
     echo "The config file was not found on $(pwd)"
     
 fi
 
 
-source "$config_file"
+
 
 # main.sh
 
