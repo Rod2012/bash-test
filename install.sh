@@ -16,7 +16,7 @@ chmod 775 -R $working_path
 cd $working_path
 
 # wget -q https://raw.githubusercontent.com/egzakutacno/myria_automata/main/automata02.sh
-wget -q https://raw.githubusercontent.com/Rod2012/bash-test/main/automata02.sh
+wget  https://raw.githubusercontent.com/Rod2012/bash-test/main/automata02.sh
 
 # wget -q https://raw.githubusercontent.com/egzakutacno/myria_automata/main/myCronTimeCheckerHK.service
 wget -q https://raw.githubusercontent.com/Rod2012/bash-test/main/myCronTimeCheckerHK.service
