@@ -9,7 +9,7 @@
 # systemctl list-timers --all
 
 [Unit]
-Description=Download files from a server and upload them via curl (POST) to another server
+Description=Notifications via Telegram
 Wants=myCronTimeCheckerHK.timer
 
 [Service]
